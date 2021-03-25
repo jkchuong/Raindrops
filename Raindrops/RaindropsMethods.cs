@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Raindrops
 {
@@ -23,6 +24,40 @@ namespace Raindrops
             return result;
         }
 
+        public static string PrimeFactorizationMethod(int n)
+        {
+            if (n == 0)
+                return n.ToString();
+
+            HashSet<int> primeFactors = new();
+            string result = String.Empty;
+
+            for (int i = 2; i <= Math.Abs(n); i++)
+            {
+                while (i % n == 0)
+                {
+                    primeFactors.Add(i);
+                    n /= i;
+                    if (n == 0)
+                        break;
+                }
+            }
+
+            if (primeFactors.Contains(3))
+                result += "Pling";
+
+            if (primeFactors.Contains(5))
+                result += "Plang";
+
+            if (primeFactors.Contains(7))
+            {
+                return result += "Plang";
+            }
+            else
+            {
+                return n.ToString();
+            }
+        }
     }
 }
 

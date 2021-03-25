@@ -3,7 +3,7 @@ using Raindrops;
 
 namespace RaindropsTest
 {
-    public class Method1Tests
+    public class NormalMethodTests
     {
         [TestCase(9, "Pling")]
         [TestCase(10, "Plang")]
@@ -12,6 +12,7 @@ namespace RaindropsTest
         [TestCase(30, "PlingPlang")]
         [TestCase(35, "PlangPlong")]
         [TestCase(105, "PlingPlangPlong")]
+        [TestCase(1, "1")]
         [TestCase(34, "34")]
         [TestCase(101, "101")]
         public void Method1_PositiveIntegers(int n, string expectedResult)
@@ -27,6 +28,7 @@ namespace RaindropsTest
         [TestCase(-30, "PlingPlang")]
         [TestCase(-35, "PlangPlong")]
         [TestCase(-105, "PlingPlangPlong")]
+        [TestCase(-1, "-1")]
         [TestCase(-34, "-34")]
         [TestCase(-101, "-101")]
         public void Method1_NegativeIntegers(int n, string expectedResult)
