@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Raindrops", "Raindrops\Raindrops.csproj", "{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropsTest", "RaindropsTest\RaindropsTest.csproj", "{ED395902-D8D1-4010-83C6-6D48917228D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3} = {718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718EC7A3-5F7B-44CE-A7B0-A90A969B26E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED395902-D8D1-4010-83C6-6D48917228D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED395902-D8D1-4010-83C6-6D48917228D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED395902-D8D1-4010-83C6-6D48917228D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED395902-D8D1-4010-83C6-6D48917228D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {476620BF-70BD-43D7-B36A-735A5EBA4E89}
+	EndGlobalSection
+EndGlobal
