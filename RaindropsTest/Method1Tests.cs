@@ -11,11 +11,12 @@ namespace RaindropsTest
         [TestCase(21, "PlingPlong")]
         [TestCase(30, "PlingPlang")]
         [TestCase(35, "PlangPlong")]
+        [TestCase(105, "PlingPlangPlong")]
         [TestCase(34, "34")]
         [TestCase(101, "101")]
         public void Method1_PositiveIntegers(int n, string expectedResult)
         {
-            var result = RaindropsMethods.Method1(n);
+            var result = RaindropsMethods.NormalMethod(n);
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
@@ -25,18 +26,19 @@ namespace RaindropsTest
         [TestCase(-21, "PlingPlong")]
         [TestCase(-30, "PlingPlang")]
         [TestCase(-35, "PlangPlong")]
+        [TestCase(-105, "PlingPlangPlong")]
         [TestCase(-34, "-34")]
         [TestCase(-101, "-101")]
         public void Method1_NegativeIntegers(int n, string expectedResult)
         {
-            var result = RaindropsMethods.Method1(n);
+            var result = RaindropsMethods.NormalMethod(n);
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
         [TestCase(0, "0")]
         public void Method1_Zero(int n, string expectedResult)
         {
-            var result = RaindropsMethods.Method1(n);
+            var result = RaindropsMethods.NormalMethod(n);
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 

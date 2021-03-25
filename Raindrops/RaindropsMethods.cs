@@ -4,8 +4,11 @@ namespace Raindrops
 {
     public static class RaindropsMethods
     {
-        public static string Method1(int n)
+        public static string NormalMethod(int n)
         {
+            if (n == 0 || n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
+                return n.ToString();
+
             string result = String.Empty;
 
             if (n % 3 == 0)
@@ -17,11 +20,9 @@ namespace Raindrops
             if (n % 7 == 0)
                 result += "Plong";
 
-            if (n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
-                return n.ToString();
-
             return result;
         }
+
     }
 }
 
