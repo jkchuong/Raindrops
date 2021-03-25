@@ -29,12 +29,13 @@ namespace Raindrops
             if (n == 0)
                 return n.ToString();
 
+            int val = n;
             HashSet<int> primeFactors = new();
             string result = String.Empty;
 
             for (int i = 2; i <= Math.Abs(n); i++)
             {
-                while (i % n == 0)
+                while (n % i == 0)
                 {
                     primeFactors.Add(i);
                     n /= i;
@@ -50,13 +51,12 @@ namespace Raindrops
                 result += "Plang";
 
             if (primeFactors.Contains(7))
-            {
-                return result += "Plang";
-            }
-            else
-            {
-                return n.ToString();
-            }
+                result += "Plong";
+
+            if (string.IsNullOrEmpty(result))
+                return val.ToString();
+
+            return result;
         }
     }
 }
