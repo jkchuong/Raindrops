@@ -24,6 +24,24 @@ namespace Raindrops
             return result;
         }
 
+        public static string CondensedNormalMethod(int n)
+        {
+            if (n == 0 || n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
+                return n.ToString();
+
+            string result = String.Empty;
+            int[] factors = new int[] { 3, 5, 7 };
+            string[] strings = new string[] { "Pling", "Plang", "Plong" };
+
+            for(int i = 0; i < factors.Length; i++)
+            {
+                if (n % factors[i] == 0)
+                    result += strings[i];
+            }
+
+            return result;
+        }
+
         public static string PrimeFactorizationMethod(int n)
         {
             if (n == 0)
