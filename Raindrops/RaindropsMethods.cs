@@ -78,5 +78,3 @@ namespace Raindrops
         }
     }
 }
-
-//You will be assessed on the quality of your code, functional correctness, and your approach to quality assurance and testing.
