@@ -44,5 +44,13 @@ namespace RaindropsTest
             Assert.That(result, Is.EqualTo(expectedResult));
         }
 
+        [TestCase(1, "1")]
+        [TestCase(-1, "-1")]
+        public void NormalMethod_Ones(int n, string expectedResult)
+        {
+            var result = RaindropsMethods.NormalMethod(n);
+            Assert.That(result, Is.EqualTo(expectedResult));
+        }
+
     }
 }
