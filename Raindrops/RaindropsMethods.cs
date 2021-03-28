@@ -7,9 +7,6 @@ namespace Raindrops
     {
         public static string NormalMethod(int n)
         {
-            if (n == 0 || n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
-                return n.ToString();
-
             string result = String.Empty;
 
             if (n % 3 == 0)
@@ -21,14 +18,14 @@ namespace Raindrops
             if (n % 7 == 0)
                 result += "Plong";
 
+            if (n == 0 || String.IsNullOrEmpty(result))
+                return n.ToString();
+
             return result;
         }
 
         public static string CondensedNormalMethod(int n)
         {
-            if (n == 0 || n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
-                return n.ToString();
-
             string result = String.Empty;
             int[] factors = new int[] { 3, 5, 7 };
             string[] strings = new string[] { "Pling", "Plang", "Plong" };
@@ -38,6 +35,9 @@ namespace Raindrops
                 if (n % factors[i] == 0)
                     result += strings[i];
             }
+
+            if (n == 0 || String.IsNullOrEmpty(result))
+                return n.ToString();
 
             return result;
         }
