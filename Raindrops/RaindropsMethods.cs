@@ -44,15 +44,18 @@ namespace Raindrops
 
         public static string PrimeFactorizationMethod(int n)
         {
-            if (n == 0)
-                return n.ToString();
-
-            int val = n;
-            HashSet<int> primeFactors = new();
             string result = String.Empty;
 
+            // Store the input
+            int val = n;
+
+            // Initialise list of unique integers
+            HashSet<int> primeFactors = new();
+
+            // Loop through integers up to n
             for (int i = 2; i <= Math.Abs(n); i++)
             {
+                // Keep diving by i to remove that prime factor and store it in the hash set
                 while (n % i == 0)
                 {
                     primeFactors.Add(i);
@@ -71,7 +74,7 @@ namespace Raindrops
             if (primeFactors.Contains(7))
                 result += "Plong";
 
-            if (string.IsNullOrEmpty(result))
+            if (n == 0 || string.IsNullOrEmpty(result))
                 return val.ToString();
 
             return result;
