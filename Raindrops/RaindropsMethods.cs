@@ -27,13 +27,18 @@ namespace Raindrops
         public static string CondensedNormalMethod(int n)
         {
             string result = String.Empty;
-            int[] factors = new int[] { 3, 5, 7 };
-            string[] strings = new string[] { "Pling", "Plang", "Plong" };
 
-            for(int i = 0; i < factors.Length; i++)
+            Dictionary<int, string> kvp = new Dictionary<int, string>()
             {
-                if (n % factors[i] == 0)
-                    result += strings[i];
+                {3, "Pling" },
+                {5, "Plang" },
+                {7, "Plong" }
+            };
+
+            foreach (var item in kvp)
+            {
+                if (n % item.Key == 0)
+                    result += item.Value;
             }
 
             if (n == 0 || String.IsNullOrEmpty(result))
@@ -46,8 +51,12 @@ namespace Raindrops
         {
             string result = String.Empty;
 
-            int[] factors = new int[] { 3, 5, 7 };
-            string[] strings = new string[] { "Pling", "Plang", "Plong" };
+            Dictionary<int, string> kvp = new Dictionary<int, string>()
+            {
+                {3, "Pling" },
+                {5, "Plang" },
+                {7, "Plong" }
+            };
 
             // Store the input
             int val = n;
@@ -68,10 +77,10 @@ namespace Raindrops
                 }
             }
 
-            for (int i = 0; i < factors.Length; i++)
+            foreach (var item in kvp)
             {
-                if (primeFactors.Contains(factors[i]))
-                    result += strings[i];
+                if (primeFactors.Contains(item.Key))
+                    result += item.Value;
             }
 
             if (n == 0 || string.IsNullOrEmpty(result))
