@@ -32,8 +32,8 @@ Automated tests will be written for each method created. Tests will cover all po
 
   ### Approach
 
-**Approach 1 - Normal Method:** The normal method is the first method written that takes a simplistic approach. It first checks whether the the input is 0 or divisible by 3, 5, or 7. If the value is not 0 and divisible by 3, 5, or 7, then the method continues and concatenates the string outputs for each factor. 
+**Approach 1 - Normal Method:** The normal method is the first method written that takes a simplistic approach. It first initialises an empty string, then checks whether the input is divisible by 3, 5, or 7. If the input value is 0 or the resulting string is empty, then it output the input value, else it outputs a non-empty string.
 
-**Approach 2 - Condensed Method:** The condensed method is identical to the first method except that it uses a for loop instead of multiple if statements which allows for easier scalability.
+**Approach 2 - Condensed Method:** The condensed method is identical to the first method except that it uses a for loop and a dictionary instead of multiple if statements which allows for easier scalability.
 
 **Approach 3 - Prime Factorization:** The prime factorization method first checks if the value is 0, and returns 0 if it is. If not, it runs through a for loop that obtains its unique prime factors  by using a HashSet. It then outputs a string depending on whether the set contains 3, 5, or 7. 
