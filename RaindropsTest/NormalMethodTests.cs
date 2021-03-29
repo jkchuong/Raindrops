@@ -12,7 +12,6 @@ namespace RaindropsTest
         [TestCase(30, "PlingPlang")]
         [TestCase(35, "PlangPlong")]
         [TestCase(105, "PlingPlangPlong")]
-        [TestCase(1, "1")]
         [TestCase(34, "34")]
         [TestCase(101, "101")]
         public void NormalMethod_PositiveIntegers(int n, string expectedResult)
@@ -28,7 +27,6 @@ namespace RaindropsTest
         [TestCase(-30, "PlingPlang")]
         [TestCase(-35, "PlangPlong")]
         [TestCase(-105, "PlingPlangPlong")]
-        [TestCase(-1, "-1")]
         [TestCase(-34, "-34")]
         [TestCase(-101, "-101")]
         public void NormalMethod_NegativeIntegers(int n, string expectedResult)
