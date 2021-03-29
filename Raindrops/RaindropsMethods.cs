@@ -46,6 +46,9 @@ namespace Raindrops
         {
             string result = String.Empty;
 
+            int[] factors = new int[] { 3, 5, 7 };
+            string[] strings = new string[] { "Pling", "Plang", "Plong" };
+
             // Store the input
             int val = n;
 
@@ -65,14 +68,11 @@ namespace Raindrops
                 }
             }
 
-            if (primeFactors.Contains(3))
-                result += "Pling";
-
-            if (primeFactors.Contains(5))
-                result += "Plang";
-
-            if (primeFactors.Contains(7))
-                result += "Plong";
+            for (int i = 0; i < factors.Length; i++)
+            {
+                if (primeFactors.Contains(factors[i]))
+                    result += strings[i];
+            }
 
             if (n == 0 || string.IsNullOrEmpty(result))
                 return val.ToString();
